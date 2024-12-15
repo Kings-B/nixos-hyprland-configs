@@ -8,7 +8,7 @@
 
   # Bootloader.
   boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/boot"
+  boot.loader.grub.devices = [ "nodev" ]; # Change to proper boot directory path
   boot.loader.grub.useOSProber = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -37,8 +37,8 @@
   };
 
   # Enable the KDE Plasma Desktop Environment.
+  services.displayManager.sddm.wayland.enable = true;
   services.displayManager.sddm.enable = true;
-  services.xserver.windowManager.hyprland.enable = true;
  
   # Nvidia Drivers
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -80,7 +80,7 @@
     isNormalUser = true;
     description = "Poppy Field";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs;
+    packages = with pkgs; [];
   };
 
   # Enable automatic login for the user.
