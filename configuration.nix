@@ -97,6 +97,8 @@
      vscodium
      git
      firefox
+     super-productivity
+     logseq
   ];
 
   # Enable Hyprland
