@@ -97,6 +97,7 @@
      vscodium
      git
      firefox
+     thunderbird
   ];
 
   # Enable Hyprland
